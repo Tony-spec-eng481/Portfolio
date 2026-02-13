@@ -1,0 +1,61 @@
+.social-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--gray);
+  border-radius: 50%;
+  color: var(--text);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: var(--darker);
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--darker);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.social-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--primary);
+}
+
+.social-icon:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -48px;
+}

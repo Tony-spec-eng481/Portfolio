@@ -1,0 +1,9 @@
+.home {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Global section padding adjustments for fixed header */
+section:first-of-type {
+  scroll-margin-top: 80px;
+}
